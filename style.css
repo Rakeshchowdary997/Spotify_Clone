@@ -1,0 +1,435 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    overflow: hidden;
+    display: flex;
+}
+
+.sidebar {
+    width: 340px;
+    height: 100vh;
+    background-color: #000;
+    padding: 24px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.sidebar-nav {
+    background-color: #121212;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.logo img {
+    width: 130px;
+}
+
+.sidebar ul {
+    margin-top: 20px;
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 8px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #b3b3b3;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: color 0.2s ease;
+}
+
+.sidebar ul li a:hover {
+    color: #fff;
+}
+
+.sidebar-nav.box2 {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.library {
+    font-size: 16px;
+}
+
+.create-playlist {
+    background-color: #242424;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 16px 0;
+}
+
+.create-playlist h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.create-playlist p {
+    font-size: 14px;
+    color: #b3b3b3;
+    margin-bottom: 16px;
+}
+
+.create-playlist button {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.create-playlist button:hover {
+    transform: scale(1.05);
+}
+
+.privacy ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.privacy ul li a {
+    color: #b3b3b3;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.privacy ul li a:hover {
+    text-decoration: underline;
+}
+
+.eng-btn button {
+    background-color: transparent;
+    border: 1px solid #727272;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin-top: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.eng-btn button:hover {
+    background-color: #242424;
+}
+
+.main-section {
+    flex-grow: 1;
+    height: 100vh;
+    overflow-y: auto;
+    background: linear-gradient(to bottom, #1e1e1e, #121212);
+    padding: 24px;
+    position: relative;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.prev-btn button {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: #fff;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.login-btn button {
+    padding: 12px 24px;
+    border-radius: 20px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.sign-up {
+    background-color: transparent;
+    color: #b3b3b3;
+}
+
+.login {
+    background-color: #fff;
+    color: #000;
+}
+
+.spotify-playlist {
+    margin-bottom: 32px;
+}
+
+.spotify-playlist h2 {
+    margin-bottom: 20px;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 24px;
+}
+
+.item {
+    background-color: #181818;
+    padding: 16px;
+    border-radius: 8px;
+    position: relative;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.item:hover {
+    background-color: #282828;
+}
+
+.item img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+.item h4 {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.item p {
+    font-size: 12px;
+    color: #b3b3b3;
+}
+
+.play-btn {
+    position: absolute;
+    right: 24px;
+    bottom: 80px;
+    width: 40px;
+    height: 40px;
+    background-color: #1db954;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: all 0.3s ease;
+}
+
+.item:hover .play-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.footer-section {
+    padding: 48px 24px;
+    background-color: #121212;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.footer-column div {
+    color: #919191;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.col-links {
+    list-style: none;
+}
+
+.col-links li {
+    margin: 8px 0;
+}
+
+.col-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.col-links li a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    gap: 16px;
+}
+
+.social-links i {
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.social-links i:hover {
+    transform: scale(1.1);
+}
+
+hr {
+    border-color: #282828;
+    margin: 32px 0;
+}
+
+.copyright {
+    color: #919191;
+    font-size: 14px;
+}
+
+.preview {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, #ae2996, #509bf5);
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.preview .text h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.preview .text p {
+    font-size: 14px;
+    color: #eee;
+}
+
+.preview .button button {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.preview .button button:hover {
+    transform: scale(1.05);
+}
+
+.main-section::-webkit-scrollbar {
+    width: 12px;
+}
+
+.main-section::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.main-section::-webkit-scrollbar-thumb {
+    background: #727272;
+}
+
+.main-section::-webkit-scrollbar-thumb:hover {
+    background: #a7a7a7;
+}
+
+@media (max-width: 1200px) {
+    .card {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        width: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+    
+    .main-section {
+        width: 100%;
+    }
+    
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+    }
+    
+    .preview {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+}
+
+.play-btn {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.play-btn.playing .fa-play {
+    display: none;
+}
+
+.play-btn.playing .fa-pause {
+    display: inline-block;
+}
+
+.play-btn .fa-pause {
+    display: none;
+}
+
+.play-btn:hover {
+    transform: scale(1.1);
+}
+
+.preview {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
